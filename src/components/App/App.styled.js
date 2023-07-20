@@ -22,13 +22,3 @@ export const Container = styled.div`
 
   overflow-y: scroll;
 `;
-
-export const HeadTitle = styled.h1`
-  text-align: center;
-  margin-bottom: 12px;
-`;
-
-export const Title = styled.h2`
-  text-align: center;
-  margin: 12px 0px;
-`;

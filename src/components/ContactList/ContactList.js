@@ -18,10 +18,10 @@ export default function ContactList() {
 
   return (
     <List>
-      {filteredContscts.map(({ name, phone, id }) => (
+      {filteredContscts.map(({ name, number, id }) => (
         <Item key={id}>
           <Contact>
-            {name}: {phone}
+            {name}: {number}
           </Contact>
 
           <DeleteButton

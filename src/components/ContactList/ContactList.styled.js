@@ -4,8 +4,8 @@ export const List = styled.ul`
   list-style: none;
   display: flex;
   flex-direction: column;
-  padding-left: 0px;
-  padding-right: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 `;
 export const Item = styled.li`
   display: flex;
