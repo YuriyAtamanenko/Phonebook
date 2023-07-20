@@ -11,6 +11,7 @@ import PublicRoute from 'components/PublicRoute';
 const RegisterPage = lazy(() => import('pages/Register/Register'));
 const LoginPage = lazy(() => import('pages/Login/Login'));
 const ContactsPage = lazy(() => import('pages/Contacts/Contacts'));
+const HomePage = lazy(() => import('pages/Home/Home'));
 
 export default function App() {
   const dispatch = useDispatch();
@@ -24,8 +25,8 @@ export default function App() {
       <Container>
         <Routes>
           <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
             <Route
-              index
               path="login"
               element={
                 <PublicRoute restricted>
