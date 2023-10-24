@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+axios.defaults.baseURL = 'https://phonebook-api-3gs7.onrender.com';
 
 const token = {
   set(token) {
@@ -17,14 +17,14 @@ export const register = createAsyncThunk(
   'auth/register',
   async (credentials, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post('/users/signup', credentials);
+      const { data } = await axios.post('/users/register', credentials);
+
       token.set(data.token);
       Notify.success(`Registration is successful`, {
         position: 'left-top',
       });
       return data;
     } catch (error) {
-      console.dir(error);
       Notify.failure(
         'Registration failed, the email entered is already in use',
         {
@@ -41,6 +41,7 @@ export const logIn = createAsyncThunk(
   async (credentials, { rejectWithValue }) => {
     try {
       const { data } = await axios.post('/users/login', credentials);
+
       token.set(data.token);
       return data;
     } catch (error) {
@@ -88,7 +89,7 @@ export const fetchAll = createAsyncThunk(
   'contacts/fetchAll',
   async (_, { rejectWithValue }) => {
     try {
-      const { data } = await axios.get('/contacts');
+      const { data } = await axios.get('/api/contacts');
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -100,7 +101,7 @@ export const addContact = createAsyncThunk(
   'contacts/addContact',
   async (newContact, { rejectWithValue }) => {
     try {
-      const { data } = await axios.post('/contacts', newContact);
+      const { data } = await axios.post('/api/contacts', newContact);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
@@ -109,10 +110,10 @@ export const addContact = createAsyncThunk(
 );
 
 export const deleteContact = createAsyncThunk(
-  'ontacts/deleteContact',
+  'contacts/deleteContact',
   async (contactId, { rejectWithValue }) => {
     try {
-      const { data } = await axios.delete(`/contacts/${contactId}`);
+      const { data } = await axios.delete(`/api/contacts/${contactId}`);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
