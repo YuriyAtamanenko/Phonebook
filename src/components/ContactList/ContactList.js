@@ -18,15 +18,15 @@ export default function ContactList() {
 
   return (
     <List>
-      {filteredContscts.map(({ name, number, id }) => (
-        <Item key={id}>
+      {filteredContscts.map(({ name, phone, _id }) => (
+        <Item key={_id}>
           <Contact>
-            {name}: {number}
+            {name}: {phone}
           </Contact>
 
           <DeleteButton
             type="button"
-            onClick={() => dispatch(deleteContact(id))}
+            onClick={() => dispatch(deleteContact(_id))}
           >
             <AiOutlineMinus size={24} />
           </DeleteButton>
