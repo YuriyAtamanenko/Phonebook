@@ -2,7 +2,11 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
-axios.defaults.baseURL = 'https://phonebook-api-3gs7.onrender.com';
+require('dotenv').config();
+
+const { SERVER_HOST } = process.env;
+
+axios.defaults.baseURL = SERVER_HOST;
 // axios.defaults.baseURL = 'http://localhost:3000';
 
 const token = {
