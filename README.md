@@ -4,8 +4,7 @@
 
 Application for storing important contacts.
 
-Live Page -
-[yuriyatamanenko.github.io/Phonebook/](yuriyatamanenko.github.io/Phonebook/)
+Live Page -[yuriyatamanenko.github.io/Phonebook/](https://yuriyatamanenko.github.io/Phonebook/)
 
 ## Technologies Used
 
