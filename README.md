@@ -19,7 +19,7 @@ To get started with this project, follow the installation instructions below.
 
 1. Clone the repository:
 
-   git clone [https://github.com/YuriyAtamanenko/Test-assignment.git](https://github.com/YuriyAtamanenko/Phonebook.git)
+   git clone [https://github.com/YuriyAtamanenko/Phonebook.git](https://github.com/YuriyAtamanenko/Phonebook.git)
 
 2. Install the dependencies:
 
