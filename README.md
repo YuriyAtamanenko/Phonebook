@@ -1,5 +1,7 @@
 # Phonebook
 
+![Illustration PhonebookApp](./src/image/poster.jpg)
+
 Application for storing important contacts.
 
 Live Page -
@@ -19,7 +21,8 @@ To get started with this project, follow the installation instructions below.
 
 1. Clone the repository:
 
-   git clone [https://github.com/YuriyAtamanenko/Phonebook.git](https://github.com/YuriyAtamanenko/Phonebook.git)
+   git clone
+   [https://github.com/YuriyAtamanenko/Phonebook.git](https://github.com/YuriyAtamanenko/Phonebook.git)
 
 2. Install the dependencies:
 
